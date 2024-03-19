@@ -8,10 +8,11 @@ import { Footer } from './components/footer';
 import { ContactForm } from './components/contact-form';
 import { BackToTop } from './components/back-to-top';
 import { Toaster } from './components/toaster';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
-    default: 'Home',
+    default: 'Queirubim Dev',
     template: '%s | Queirubim Dev',
   },
   icons: [

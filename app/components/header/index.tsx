@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const NAV_ITEMS = [
   {
-    label: 'Home',
+    label: 'Inicío',
     href: '/',
   },
   {

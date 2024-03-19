@@ -1,9 +1,15 @@
+import { Metadata } from 'next';
 import { HeroSection } from './components/pages/home/hero-section';
 import { HighlightedProjects } from './components/pages/home/highlighted-projects';
 import { KnownTechs } from './components/pages/home/known-techs';
 import { WorkExperience } from './components/pages/home/work-experience';
 import { HomePageData } from './types/page-info';
 import { fetchHygraphQuery } from './utils/fetch-hygraph-query';
+
+export const metadata: Metadata = {
+  description:
+    'Sou um desenvolvedor Front-end e aqui descrevo algumas das minhas habilidades e também apresento diversos projetos desenvolvidos por mim!',
+};
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
