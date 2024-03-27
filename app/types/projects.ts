@@ -33,8 +33,5 @@ export type Project = {
   thumbnail: {
     url: string;
   };
-  pageThumbnail: {
-    url: string;
-  };
   sections: ProjectSection[];
 };

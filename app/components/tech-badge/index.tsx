@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { ComponentProps, useState } from 'react';
 import { Modal } from '../Modal';
+import { useScrollLock } from '@/app/utils/scroll-lock';
 
 type TechBadgeProps = ComponentProps<typeof motion.span> & {
   name: string;
@@ -15,10 +16,9 @@ export const TechBadge = ({
   icon,
   ...props
 }: TechBadgeProps) => {
+  const { lockScroll, unlockScroll } = useScrollLock();
   const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
-  isVisibleModal
-    ? (document.body.style.overflow = 'hidden')
-    : (document.body.style.overflow = 'auto');
+  isVisibleModal ? lockScroll() : unlockScroll();
   return (
     <div>
       <motion.samp
