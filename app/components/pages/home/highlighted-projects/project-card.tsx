@@ -25,18 +25,21 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 100, scale: 0.5 }}
         transition={{ duration: 0.3, delay: 0.3 }}
-        className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full"
+        className="w-full lg:min-h-full"
       >
-        <Image
-          src={project.thumbnail.url}
-          height={304}
-          width={420}
-          alt={`Tumbnaill do projeto ${project.title}`}
-          className="w-full h-full object-cover rounded-lg"
-        />
+        <Link href={`/projects/${project.slug}`}>
+          <Image
+            priority
+            src={project.thumbnail.url}
+            height={304}
+            width={420}
+            alt={`Tumbnaill do projeto ${project.title}`}
+            className="w-full h-auto object-cover rounded-lg"
+          />
+        </Link>
       </motion.div>
 
-      <div className="flex-1 lg:py-[18px]">
+      <div className="flex-1 lg:py-[18px] lg:min-w-[500px] xl:min-w-[640px]">
         <motion.h3
           {...fadeUpAnimation}
           transition={{ duration: 0.7 }}
@@ -62,6 +65,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[380px] ">
           {project.technologies.map((tech, i) => (
             <TechBadge
+              icon={tech.iconSvg}
+              shortDescription={tech.shortDescription}
               name={tech.name}
               key={`${project.title}-tech-${tech.name}`}
               {...techBadgeAnimation}

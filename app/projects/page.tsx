@@ -12,6 +12,8 @@ const getPageData = async (): Promise<ProjectsPageData> => {
     projects {
       technologies {
         name
+        shortDescription
+        iconSvg
       }
       shortDescription
       title

@@ -3,10 +3,13 @@ export type KnownTech = {
   iconSvg: string;
   name: string;
   startDate: string;
+  shortDescription: string;
 };
 
 export type Technology = {
   name: string;
+  shortDescription: string;
+  iconSvg: string;
 };
 
 export type ProjectSection = {

@@ -27,17 +27,19 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       <motion.div
         {...fadeUpAnimation}
         transition={{ duration: 0.5 }}
-        className="text-sky-100 [text-shadow:_1px_1px_0_rgb(0_0_0_/_90%)] z-10 text-center max-w-[640px] my-4 sm:my-6 text-sm sm:text-base"
+        className="text-sky-100 [text-shadow:_1px_1px_0_rgb(0_0_0_/_90%)] z-10 text-start max-w-[640px] my-4 sm:my-6 text-sm sm:text-base"
       >
         <RichText content={project.description.raw} />
       </motion.div>
       <div className="w-full max-w-[480px] flex flex-wrap gap-2 items-center justify-center">
         {project.technologies.map((tech, i) => (
           <TechBadge
+            icon={tech.iconSvg}
+            shortDescription={tech.shortDescription}
             {...techBadgeAnimation}
             transition={{ duration: 0.2, delay: i * 0.1 }}
             name={tech.name}
-            key={`${project.title}-tech-${tech.name}`}
+            key={`${project.title}-tech-${tech.name}-${i} `}
           />
         ))}
       </div>

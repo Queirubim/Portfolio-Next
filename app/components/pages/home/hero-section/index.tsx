@@ -43,6 +43,8 @@ export const HeroSection = ({ homeInfo }: homeSectionProps) => {
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[448px]">
             {homeInfo.technologies.map((tech, i) => (
               <TechBadge
+                icon={tech.iconSvg}
+                shortDescription={tech.shortDescription}
                 key={`tb-${tech.name}-${i}`}
                 name={tech.name}
                 {...techBadgeAnimation}
@@ -81,6 +83,7 @@ export const HeroSection = ({ homeInfo }: homeSectionProps) => {
           className="origin-center"
         >
           <Image
+            priority
             width={420}
             height={404}
             src={homeInfo.profilePicture.url}

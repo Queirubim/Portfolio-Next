@@ -57,6 +57,8 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[480px] mb-8">
           {experience.technologies.map((tech, i) => (
             <TechBadge
+              icon={tech.iconSvg}
+              shortDescription={tech.shortDescription}
               {...techBadgeAnimation}
               transition={{ duration: 0.2, delay: i * 0.1 }}
               name={tech.name}

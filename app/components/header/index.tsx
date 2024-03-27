@@ -24,9 +24,10 @@ export const Header = () => {
       transition={{ duration: 1 }}
       className="absolute top-0 w-full z-10 h-24 flex items-center justify-center"
     >
-      <div className="container shadow-md rounded-lg flex items-center justify-between">
+      <div className="container flex items-center justify-between border-b border-sky-700">
         <Link href="/">
           <Image
+            priority
             width={58}
             height={58}
             src={'/images/logo.svg'}

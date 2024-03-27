@@ -15,6 +15,8 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
     project(where: {slug: "${slug}"}) {
       technologies {
         name
+        shortDescription
+        iconSvg
       }
       shortDescription
       description {
@@ -23,9 +25,6 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
       }
       title
       thumbnail {
-        url
-      }
-      pageThumbnail {
         url
       }
       slug
@@ -53,6 +52,8 @@ export default async function Project({ params: { slug } }: ProjectProps) {
     </>
   );
 }
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const query = `

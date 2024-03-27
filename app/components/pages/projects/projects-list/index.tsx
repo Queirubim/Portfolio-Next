@@ -16,7 +16,7 @@ export const ProjectsList = ({ projects }: ProjectsListProps) => {
         <motion.div
           {...fadeUpAnimation}
           transition={{ duration: 0.5, delay: i * 0.1 }}
-          key={project.title}
+          key={`${i}-${i + 1}`}
         >
           <Link href={`/projects/${project.slug}`}>
             <ProjectCard project={project} />
