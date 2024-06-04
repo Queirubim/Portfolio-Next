@@ -2,14 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer utilities {
   body {
-    @apply bg-[#012340] text-gray-300
+    @apply bg-light dark:bg-dark text-sky-100
   }
 }
 
+@layer components {
+  .ctPseudo {
+    @apply content-[''] w-0 bg-black dark:bg-white transition-all duration-500 absolute h-0.5 -bottom-1 hover:w-7/12
+  }
+}
+
+.hoverLinkEffect {
+  @apply after:ctPseudo before:ctPseudo before:left-1/2 after:right-1/2
+}
+
+.text-shadow-glitch{
+  text-shadow: 2px -2px 0 #A6219D, -2px 2px 0 #04D5D5
+}
+
+.box-shadow-glitch{
+  box-shadow: 1px -1px 0 #A6219D, -1px 1px 0 #04D5D5 r
+}
+
+.text-shadow{
+  text-shadow: 1px 1px 0 #012340
+}
+
 .container {
-  @apply mx-auto w-full max-w-[1200px] px-6
+  @apply mx-auto w-full max-w-[1600px] px-6
 }
 
 *::-webkit-scrollbar {

@@ -7,16 +7,14 @@ export const RichText = ({ ...props }: RichTextProps) => {
     <CMSRichText
       {...props}
       renderers={{
-        bold: ({ children }) => (
-          <b className="text-gray-50 font-medium">{children}</b>
-        ),
+        bold: ({ children }) => <b className="font-medium">{children}</b>,
         ul: ({ children }) => (
           <ul className="list-disc list-inside pl-4 flex flex-col gap-1">
             {children}
           </ul>
         ),
         a: ({ children, ...props }) => (
-          <a className="text-sky-400 transition-colors underline" {...props}>
+          <a className="text-cyan-300 transition-colors underline" {...props}>
             {children}
           </a>
         ),

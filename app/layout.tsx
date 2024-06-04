@@ -1,4 +1,5 @@
 import { Inter, IBM_Plex_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { ReactNode } from 'react';
 import { Header } from './components/header';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   icons: [
     {
-      url: '/favicon.svg',
+      url: '/images/glitch-logo.svg',
     },
   ],
 };
@@ -33,16 +34,29 @@ const plexMono = IBM_Plex_Mono({
   weight: ['400', '500'],
 });
 
+const doctorGlitch = localFont({
+  variable: '--font-doctorGlitch',
+  src: '../public/fonts/DoctorGlitch.otf',
+  display: 'swap',
+});
+
+import { NextUIProvider } from '@nextui-org/react';
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} ${plexMono.variable} ${doctorGlitch.variable}`}
+    >
       <body>
-        <Toaster />
-        <Header />
-        {children}
-        <ContactForm />
-        <Footer />
-        <BackToTop />
+        <NextUIProvider>
+          <Toaster />
+          <Header />
+          {children}
+          <ContactForm />
+          <Footer />
+          <BackToTop />
+        </NextUIProvider>
       </body>
     </html>
   );

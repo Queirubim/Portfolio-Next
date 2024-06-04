@@ -13,15 +13,17 @@ export const NavItem = ({ label, href }: NavItemProps) => {
   const isActive = pathname === href;
   return (
     // cn(executa sempre, executa conforme condição)
-    <Link
-      href={href}
-      className={cn(
-        'flex text-gray-400/50 items-center gap-2 font-mono font-medium',
-        isActive && 'text-sky-300',
-      )}
-    >
-      <span className="text-sky-500">#</span>
-      {label}
-    </Link>
+    <div className="relative">
+      <Link
+        href={href}
+        className={cn(
+          'flex text-gray-400/50 gap-2 items-center font-mono font-medium hoverLinkEffect',
+          isActive && 'text-white',
+        )}
+      >
+        <span className={cn('', isActive && 'text-shadow-glitch')}>#</span>
+        {label}
+      </Link>
+    </div>
   );
 };

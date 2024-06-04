@@ -28,7 +28,7 @@ export const SectionTitle = ({
       <motion.h3
         {...animProps}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-3xl font-medium "
+        className="text-2xl font-medium font-glitch text-shadow-glitch tracking-widest"
       >
         {title}
       </motion.h3>

@@ -14,7 +14,7 @@ export const Page404 = () => {
             className=" w-[280px] sm:w-[400px] md:w-[600px] lg:w-[800px]"
           />
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 w-[200px]:">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 w-[200px]: text-white">
           A página que você está procurando não foi encontrada.
         </h2>
       </div>

@@ -85,7 +85,7 @@ export default async function Home() {
   return (
     <>
       <HeroSection homeInfo={pageData} />
-      <div className="bg-clouds bg-cover bg-center bg-fixed">
+      <div>
         <KnownTechs
           back={pageData.knowTechsBack}
           front={pageData.knowTechsFront}
