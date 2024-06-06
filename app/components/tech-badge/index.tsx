@@ -22,7 +22,7 @@ export const TechBadge = ({
   return (
     <div>
       <motion.samp
-        className="text-sky-400 border border-transparent bg-sky-800/80 hover:bg-sky-800 hover:border-sky-400 text-sm px-3 py-1 rounded-xl
+        className="text-bluePhase-100 border border-transparent bg-bluePhase-700/80 hover:bg-bluePhase-700 hover:border-bluePhase-100 text-sm px-3 py-1 rounded-xl
       "
         {...props}
         onClick={() => setIsVisibleModal(!isVisibleModal)}

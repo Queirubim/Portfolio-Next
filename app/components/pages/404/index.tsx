@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const Page404 = () => {
   return (
-    <section className="w-full lg:h-auto bg-cloudy bg-cover bg-fixed bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+    <section className="w-full lg:h-auto flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-center justify-center flex-col-reverse lg:flex-row">
         <div className="w-full flex justify-center">
           <Image

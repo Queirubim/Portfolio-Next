@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export const PageIntroduction = () => {
   return (
-    <section className="w-full h-[450px] bg-cloudy lg:h-[630px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center ">
+    <section className="w-full h-[450px] lg:h-[630px] flex flex-col items-center justify-center ">
       <SectionTitle
         subtitle="projetos"
         title="Meus Projetos"
@@ -21,7 +21,7 @@ export const PageIntroduction = () => {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center"
       >
-        <p className="text-sky-100 [text-shadow:_1px_1px_0_rgb(0_0_0_/_90%)] text-center max-w-[640px] my-6 text-lg sm:text-base">
+        <p className="text-sky-100 text-center max-w-[640px] my-6 text-lg sm:text-base">
           Aqui você poderá ver alguns dos trabalhos que eu desenvolvi. Navegue à
           vontade e explore os projetos para ver como foram criados, as
           tecnologias utilizadas e as funcionalidades implementadas.

@@ -8,10 +8,6 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/components/(navbar|modal).js',
   ],
   theme: {
-    backgroundImage: {
-      cloudy: 'url(/images/cloudy.svg)',
-      clouds: 'url(/images/clouds.svg)',
-    },
     fontFamily: {
       sans: ['var(--font-inter)', 'sans-serif'],
     },
@@ -25,7 +21,7 @@ module.exports = {
       },
       colors: {
         dark: '#13131f',
-        light: '#f9f9f9',
+        light: '#F2F2F0',
         pinkPhase: {
           100: '#E02DD4',
           200: '#C327B8',
@@ -47,6 +43,6 @@ module.exports = {
       },
     },
   },
-  // darkMode: 'class',
+  darkMode: 'class',
   plugins: [nextui()],
 };

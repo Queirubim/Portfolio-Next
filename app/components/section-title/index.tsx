@@ -23,7 +23,7 @@ export const SectionTitle = ({
       <motion.samp
         {...animProps}
         transition={{ duration: 0.5 }}
-        className="font-mono text-sm text-sky-400"
+        className="font-mono text-sm text-bluePhase-100"
       >{`../${subtitle}`}</motion.samp>
       <motion.h3
         {...animProps}

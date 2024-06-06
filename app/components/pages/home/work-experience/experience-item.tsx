@@ -19,7 +19,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
       className="grid group grid-cols-[40px,1fr] gap-4 md:gap-10"
     >
       <div className="flex flex-col items-center gap-4">
-        <div className="rounded-full border border-gray-500 group-hover:border-sky-400 transition-colors p-0.5">
+        <div className="rounded-full border border-gray-500 group-hover:border-bluePhase-100 transition-colors p-0.5">
           <Image
             src={experience.workedPicture.url}
             alt={`Logo da Empresa ${experience.workedArea} `}
@@ -37,7 +37,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
           <a
             href={experience.workedUrl}
             target="_blank"
-            className="text-gray-500 group-hover:text-sky-400 transition-colors"
+            className="text-gray-500 group-hover:text-bluePhase-100 transition-colors"
             rel="noreferrer"
           >
             @ {experience.workedArea}

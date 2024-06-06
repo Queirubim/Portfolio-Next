@@ -17,17 +17,17 @@ type ProjectDetailsProps = {
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   return (
-    <section className="w-full sm:min-h-[750px] bg-cloudy bg-cover bg-no-repeat flex flex-col items-center justify-end relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden ">
+    <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-end relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden ">
       <SectionTitle
         subtitle="projeto"
         title={project.title}
-        className="text-center [text-shadow:_1px_1px_0_rgb(0_0_0_/_90%)] items-center sm:[&>h3]:text-4xl "
+        className="text-center items-center sm:[&>h3]:text-4xl "
       />
 
       <motion.div
         {...fadeUpAnimation}
         transition={{ duration: 0.5 }}
-        className="text-sky-100 [text-shadow:_1px_1px_0_rgb(0_0_0_/_90%)] z-10 text-start max-w-[640px] my-4 sm:my-6 text-sm sm:text-base"
+        className="text-sky-100 z-10 text-start max-w-[640px] my-4 sm:my-6 text-sm sm:text-base"
       >
         <RichText content={project.description.raw} />
       </motion.div>

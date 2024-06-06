@@ -4,13 +4,13 @@
 
 @layer utilities {
   body {
-    @apply bg-light dark:bg-dark text-sky-100
+    @apply bg-dark text-sky-100
   }
 }
 
 @layer components {
   .ctPseudo {
-    @apply content-[''] w-0 bg-black dark:bg-white transition-all duration-500 absolute h-0.5 -bottom-1 hover:w-7/12
+    @apply content-[''] w-0 bg-white transition-all duration-500 absolute h-0.5 -bottom-1 hover:w-7/12
   }
 }
 
@@ -23,11 +23,11 @@
 }
 
 .box-shadow-glitch{
-  box-shadow: 1px -1px 0 #A6219D, -1px 1px 0 #04D5D5 r
+  box-shadow: 1px -1px 0 #A6219D, -1px 1px 0 #04D5D5
 }
 
-.text-shadow{
-  text-shadow: 1px 1px 0 #012340
+.button-shadow-glitch{
+  box-shadow: 5px -5px 20px #A6219D, -5px 5px 20px #04D5D5
 }
 
 .container {
@@ -35,15 +35,13 @@
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #374151;
-  border-radius: 5px;
+  background: #13131f;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #0284c7;
-  border-radius: 14px;
+  background-color: #04D5D5;
 }

@@ -9,7 +9,7 @@ export const InputPerson = forwardRef<HTMLInputElement, InputPersonProps>(
     return (
       <input
         className={cn(
-          'w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-sky-400 ',
+          'w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-bluePhase-100',
           className,
         )}
         ref={ref}

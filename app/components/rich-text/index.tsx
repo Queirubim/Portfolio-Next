@@ -14,7 +14,10 @@ export const RichText = ({ ...props }: RichTextProps) => {
           </ul>
         ),
         a: ({ children, ...props }) => (
-          <a className="text-cyan-300 transition-colors underline" {...props}>
+          <a
+            className="text-bluePhase-100 transition-colors underline"
+            {...props}
+          >
             {children}
           </a>
         ),
