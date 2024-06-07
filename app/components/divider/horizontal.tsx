@@ -7,7 +7,10 @@ type HorizontalDividerProps = {
 export const HorizontalDivider = ({ className }: HorizontalDividerProps) => {
   return (
     <div
-      className={cn('w-full my-8 border-b border-b-sky-700', className)}
+      className={cn(
+        'w-full my-8 h-px bg-gradient-to-r from-pinkPhase-500 to-bluePhase-500',
+        className,
+      )}
     ></div>
   );
 };

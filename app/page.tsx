@@ -23,6 +23,9 @@ const getPageData = async (): Promise<HomePageData> => {
         shortDescription
         iconSvg
       }
+      curriculum {
+        url
+      }
       profilePicture {
         url
       }
@@ -34,11 +37,13 @@ const getPageData = async (): Promise<HomePageData> => {
         iconSvg
         name
         startDate
+        shortDescription
       }
       knowTechsBack {
         iconSvg
         name
         startDate
+        shortDescription
       }
       highlightProjects {
         slug

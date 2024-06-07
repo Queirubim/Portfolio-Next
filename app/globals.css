@@ -12,6 +12,10 @@
   .ctPseudo {
     @apply content-[''] w-0 bg-white transition-all duration-500 absolute h-0.5 -bottom-1 hover:w-7/12
   }
+
+  .smoke-glitch{
+   box-shadow: 5px -5px 20px #A6219D, -5px 5px 20px #04D5D5
+  }
 }
 
 .hoverLinkEffect {

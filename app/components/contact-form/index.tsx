@@ -63,7 +63,7 @@ export const ContactForm = () => {
             {...register('email')}
           />
           <textarea
-            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-sky-400"
+            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-sky-100 p-4 focus:outline-none focus:ring-2 ring-bluePhase-100"
             placeholder="Mensagem"
             maxLength={500}
             {...register('message')}

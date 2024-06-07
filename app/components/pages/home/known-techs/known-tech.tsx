@@ -1,26 +1,24 @@
 import { CMSIcon } from '@/app/components/cms-icon';
 import { KnownTech as IKnownTech } from '@/app/types/projects';
-import { getRelativeTimeString } from '@/app/utils/get-relative-time';
+import { ModalTech } from './modal-tech';
 
 type KnownTechProps = {
   tech: IKnownTech;
 };
 
 export const KnownTech = ({ tech }: KnownTechProps) => {
-  const relativeTime = getRelativeTimeString(
-    new Date(tech.startDate),
-    'pt-BR',
-  ).replace('há', '');
   return (
-    <div className="p-6 rounded-lg border-solid border-2 border-transparent bg-gray-400/20 text-gray-300 flex flex-col gap-2 transition-all hover:bg-sky-950 hover:text-sky-400 hover:border-sky-400">
-      <div className="flex items-center justify-between ">
-        <p className="font-medium ">{tech.name}</p>
-        <div className="text-4xl">
-          <CMSIcon icon={tech.iconSvg} />
-        </div>
+    <div className="p-6 bg-gray-800 rounded-tl-3xl rounded-br-3xl border-2 border-t-bluePhase-100 border-l-bluePhase-100 border-b-pinkPhase-100 border-r-pinkPhase-100 text-sky-100 flex flex-col transition-all ease-in-out duration-200 hover:scale-105 relative">
+      <div className="text-4xl flex items-center justify-center flex-col gap-2">
+        <p className="text-base">{tech.name}</p>
+        <CMSIcon icon={tech.iconSvg} />
       </div>
-
-      <samp>{relativeTime} de experiência</samp>
+      <ModalTech
+        title={tech.name}
+        description={tech.shortDescription}
+        icon={tech.iconSvg}
+        date={tech.startDate}
+      />
     </div>
   );
 };

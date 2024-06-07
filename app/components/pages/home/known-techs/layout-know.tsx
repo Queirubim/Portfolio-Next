@@ -15,9 +15,9 @@ export const LayoutKnow = ({ title, techs }: LayoutKnowProps) => {
     exit: { opacity: 0, x: -100 },
   };
   return (
-    <div className="w-full rounded-lg transition-all hover:shadow-2xl p-6">
-      <span className="font-mono text-2xl text-sky-400">{title}</span>
-      <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(274px,1fr))] gap-3 mt-[60px]">
+    <div className="w-full transition-all p-6">
+      <span className="font-mono text-2xl text-bluePhase-100">{title}</span>
+      <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 mt-[60px]">
         {techs?.map((tech, i) => (
           <motion.div
             {...animation}

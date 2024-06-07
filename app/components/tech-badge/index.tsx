@@ -1,8 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ComponentProps, useState } from 'react';
+import { ComponentProps } from 'react';
 import { Modal } from '../Modal';
-import { useScrollLock } from '@/app/utils/scroll-lock';
 
 type TechBadgeProps = ComponentProps<typeof motion.span> & {
   name: string;
@@ -10,32 +9,10 @@ type TechBadgeProps = ComponentProps<typeof motion.span> & {
   icon: string;
 };
 
-export const TechBadge = ({
-  name,
-  shortDescription,
-  icon,
-  ...props
-}: TechBadgeProps) => {
-  const { lockScroll, unlockScroll } = useScrollLock();
-  const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
-  isVisibleModal ? lockScroll() : unlockScroll();
+export const TechBadge = ({ name, shortDescription, icon }: TechBadgeProps) => {
   return (
     <div>
-      <motion.samp
-        className="text-bluePhase-100 border border-transparent bg-bluePhase-700/80 hover:bg-bluePhase-700 hover:border-bluePhase-100 text-sm px-3 py-1 rounded-xl
-      "
-        {...props}
-        onClick={() => setIsVisibleModal(!isVisibleModal)}
-      >
-        {name}
-      </motion.samp>
-      <Modal
-        icon={icon}
-        title={name}
-        description={shortDescription}
-        isVisible={isVisibleModal}
-        setIsVisible={() => setIsVisibleModal(!isVisibleModal)}
-      />
+      <Modal icon={icon} title={name} description={shortDescription} />
     </div>
   );
 };

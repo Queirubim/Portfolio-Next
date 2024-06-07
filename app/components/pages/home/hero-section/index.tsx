@@ -1,6 +1,4 @@
 'use client';
-// import { TechBadge } from '@/app/components/tech-badge';
-// import Image from 'next/image';
 import { Image } from '@nextui-org/image';
 import { Button } from '@/app/components/buttons';
 import { HiArrowNarrowRight } from 'react-icons/hi';
@@ -9,9 +7,7 @@ import { HomePageInfo } from '@/app/types/page-info';
 import { RichText } from '@/app/components/rich-text';
 import { CMSIcon } from '@/app/components/cms-icon';
 import { motion } from 'framer-motion';
-// import { techBadgeAnimation } from '@/app/lib/animations';
 import { ButtonGradient } from '@/app/components/buttons/buttonGradient';
-import { SectionTitle } from '@/app/components/section-title';
 
 type homeSectionProps = {
   homeInfo: HomePageInfo;
@@ -51,11 +47,16 @@ export const HeroSection = ({ homeInfo }: homeSectionProps) => {
           {/* Contato */}
           <div className="flex flex-col sm:items-center md:min-w-[390px]">
             <div className="w-full flex flex-col gap-5 mb-5 sm:mb-0 md:flex-row">
-              <ButtonGradient
-              // onClick={handleContact}
-              >
+              <ButtonGradient className="relative">
                 Download CV
                 <IoMdDownload size={18} />
+                <a
+                  href={homeInfo.curriculum.url}
+                  className="absolute w-full h-full"
+                  download={homeInfo.curriculum.url}
+                  target="_blank"
+                  rel="noreferrer"
+                ></a>
               </ButtonGradient>
 
               <Button onClick={handleContact} className="button-shadow-glitch ">
@@ -90,11 +91,7 @@ export const HeroSection = ({ homeInfo }: homeSectionProps) => {
           className="origin-center"
         >
           <Image
-            // priority
-            // width={420}
-            // height={404}
-            // src={homeInfo.profilePicture.url}
-            src={'/images/Teste1.png'}
+            src={homeInfo.profilePicture.url}
             alt="Foto de perfil de Allan Soares Amaral"
             className="w-[300px] h-[230px] md:w-[520px] md:h-[404px]  mb-6 lg:mb-0 shadow-2xl object-cover hover:scale-110 transition-all"
           />

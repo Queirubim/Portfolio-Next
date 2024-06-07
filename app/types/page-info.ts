@@ -15,6 +15,9 @@ export type HomePageInfo = {
   profilePicture: {
     url: string;
   };
+  curriculum: {
+    url: string;
+  };
   socials: Social[];
   knowTechsFront: KnownTech[];
   knowTechsBack: KnownTech[];

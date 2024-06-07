@@ -10,6 +10,7 @@ import { Project } from '@/app/types/projects';
 import { RichText } from '@/app/components/rich-text';
 import { motion } from 'framer-motion';
 import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animations';
+import { ButtonGradient } from '@/app/components/buttons/buttonGradient';
 
 type ProjectDetailsProps = {
   project: Project;
@@ -50,15 +51,15 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       >
         {project?.githubUrl && (
           <a href={project.githubUrl} target="_blank" rel="noreferrer">
-            <Button className="min-w-[180px]">
+            <ButtonGradient className="min-w-[180px]">
               <TbBrandGithub size={20} />
               Repositório
-            </Button>
+            </ButtonGradient>
           </a>
         )}
         {project?.onlineProjectUrl && (
           <a href={project.onlineProjectUrl} target="_blank" rel="noreferrer">
-            <Button className="min-w-[180px]">
+            <Button className="min-w-[180px] button-shadow-glitch">
               <FiGlobe size={20} />
               Projeto Online
             </Button>
