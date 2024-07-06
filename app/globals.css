@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #04D5D5;
+    --color-secondary: #A6219D;
+  }
+}
+
+@layer utilities {
+  body {
+    @apply bg-dark text-sky-100
+  }
+}
+
+@layer components {
+  .psBar {
+    @apply content-[''] w-0 bg-white transition-all duration-500 absolute h-0.5 -bottom-1 hover:w-7/12
+  }
+
+  .smoke-glitch{
+   box-shadow: 5px -5px 20px var(--color-secondary), -5px 5px 20px var(--color-primary)
+  }
+}
+
+.gradientText{
+  background: linear-gradient(to bottom right, var(--color-primary),var(--color-secondary)) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hoverLinkEffect {
+  @apply after:psBar before:psBar before:left-1/2 after:right-1/2
+}
+
+.text-shadow-glitch{
+  text-shadow: 2px -2px 0 var(--color-secondary), -2px 2px 0 var(--color-primary)
+}
+
+.box-shadow-glitch{
+  box-shadow: 1px -1px 0 var(--color-secondary), -1px 1px 0 var(--color-primary)
+}
+
+.button-shadow-glitch{
+  box-shadow: 5px -5px 20px var(--color-secondary), -5px 5px 20px var(--color-primary)
+}
+
+.container {
+  @apply mx-auto w-full max-w-[1600px] px-8
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #13131f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+}
